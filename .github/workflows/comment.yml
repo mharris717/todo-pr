@@ -1,0 +1,9 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is seeing comments
+on: [pull_request_review_comment]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The comment ${github.event.comment.body} triggered this workflow."
+      - run: echo "${github.event.comment}"
