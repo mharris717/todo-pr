@@ -5,5 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - run: echo Sup "${github}"
       - run: echo "The comment ${github.event.comment.body} triggered this workflow."
       - run: echo "${github.event.comment}"
