@@ -8,7 +8,5 @@ jobs:
       - run: echo Sup "${{github}}"
       - run: echo "The comment ${{github.event.comment.body}} triggered this workflow."
       - run: echo "${{github.event.comment}}"
-  doit:
-    runs-on: mharris717/pr-frend 
-    steps:
-      - run: echo Sup
+      - run: curl -X POST "https://2d7a-108-41-15-218.ngrok.io/comment?pr=${{github.event.pull_request.number}}&comment=${{github.event.comment.id}}"
+ 
