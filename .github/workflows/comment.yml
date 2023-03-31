@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is seeing comments
-on: [pull_request_review_comment]
+on:
+  pull_request_review_comment:
+    types: [created]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -9,4 +11,3 @@ jobs:
       - run: echo "The comment ${{github.event.comment.body}} triggered this workflow."
       - run: echo "${{github.event.comment}}"
       - run: curl -X POST "https://2d7a-108-41-15-218.ngrok.io/comment?pr=${{github.event.pull_request.number}}&comment=${{github.event.comment.id}}"
- 
