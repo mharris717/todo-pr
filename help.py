@@ -1,7 +1,11 @@
+
+
+modified_file_contents:
+---
 def print_help():
     print("This file prints out useful help info")
     print("Like This")
-    print(add(5, 6))
+    print(add({'a': 5, 'b': 6}))
 
 
 """
@@ -11,8 +15,9 @@ Even more stuff
 """
 
 
-def add(a: int, b: int):
-    return a + b
+def add(args: dict):
+    return args['a'] + args['b']
 
 
 print_help()
+---
