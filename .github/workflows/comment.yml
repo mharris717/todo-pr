@@ -10,4 +10,4 @@ jobs:
       - run: echo Sup "${{github}}"
       - run: echo "The comment ${{github.event.comment.body}} triggered this workflow."
       - run: echo "${{github.event.comment}}"
-      - run: curl -X POST "https://2d7a-108-41-15-218.ngrok.io/comment?pr=${{github.event.pull_request.number}}&comment=${{github.event.comment.id}}"
+      - run: curl -X POST "https://2d7a-108-41-15-218.ngrok.io/comment?pr=${{github.event.pull_request.number}}&comment=${{github.event.comment.id}}&owner=mharris717&repo=todo-pr"
